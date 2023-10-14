@@ -32,3 +32,25 @@ console.log("hello world")
 console.log(typeof heros)
 
 //http://262.ecma-international.org/5.1/#sec-11.4.3
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Memory-------
+// Stack (Primitive)[get copy of the value] , Heap (Non-Primitive) [get refrence of the value]
+
+let myYoutubeName = "shivishrivastavadotcom"
+
+let anotherName = myYoutubeName
+anotherName = "chaiorcode"
+console.log(myYoutubeName)
+console.log(anotherName)
+
+let userOne = {
+    email:"user@gmail.com",
+    upi:"user@ybl"
+}
+
+let userTwo = userOne
+userTwo.email = "shivi@gmail.com"
+
+console.log(userTwo.email)
+console.log(userOne.email)
