@@ -62,3 +62,18 @@ forms.addEventListener('submit', function(e) {
 })
 
 ```
+
+## project 3 solution
+
+```
+const clock = document.getElementById('clock')
+// document.querySelector('#clock')
+//to update time each seconds the time interval method will be use
+
+setInterval(function(){
+  let date = new Date()
+  // console.log(date.toLocaleTimeString())
+  clock.innerHTML = date.toLocaleTimeString();
+},1000)
+
+```
