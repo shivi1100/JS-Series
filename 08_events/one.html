@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background: #414141; color:aliceblue">
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+         <li><img width="200px" id="photoshope" src="https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="photoshope"></li>
+         <li><img width="200px" id="japan" src="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+         <li><img width="200px" id="river" src="https://images.pexels.com/photos/848573/pexels-photo-848573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+         <li><img width="200px" id="owl" src="https://images.pexels.com/photos/341013/pexels-photo-341013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+         <li><img width="200px" id="christmas" src="https://images.pexels.com/photos/3444345/pexels-photo-3444345.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+         <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+// document.getElementById('owl').onclick = function(){
+//     alert("owl clicked")
+// }
+
+//attachEvent()used old times
+//jquery onevent  
+
+// to study ==> type , time-stamp, defaultprevented, 
+// target, tooelement, srcelement, currenttarget
+// client x , client y, screen x, screen y
+// altkey , ctrlkey, keycode, shiftkey
+
+// document.getElementById('images').addEventListener('click',function(e){
+//     console.log("clicked inside the ul")
+// }, false)
+
+// document.getElementById('owl').addEventListener('click',function(e){
+//     console.log("owl clicked")
+//     e.stopPropagation() // to get individual value not bubling
+// }, false)
+ 
+//  document.getElementById('google').addEventListener('click', function(e){
+//     console.log("google clicked")
+//    e.preventDefault();
+//    e.stopPropagation()
+//  },false)
+
+// =========== examples based on events==================
+
+// when click on li that image will hide
+
+document.querySelector('#images').addEventListener
+('click', function(e){
+ console.log(e.target.tagName)
+ if(e.target.tagName === "IMG"){
+ console.log(e.target.id)
+ let removeIt = e.target.parentNode
+ removeIt.remove()
+ }
+ 
+})
+// removeIt.parentNode.removeChild(removeIt)
+
+
+
+</script>
+</html>
