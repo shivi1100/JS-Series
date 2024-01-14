@@ -15,20 +15,21 @@
    const sayDate = function(str){
     console.log(str, Date.now())
   }
+ let intervalId;
+ const startNumber = function(){
+  if(!intervalId){
+    intervalId = setInterval(sayDate, 2000, "hii")
+  }
+ }
 
-    
-  document.querySelector('#start').addEventListener('click', function(){
-    const intervalId = setInterval(sayDate, 2000, "hi")
-   document.querySelector('#stop').addEventListener('click', function(){
-    clearInterval(intervalId)
-   })
-  })
+ const stopNumber = function(){
+  clearInterval(intervalId)
+  intervalId = null;
+ }
+  document.querySelector('#start').addEventListener('click', startNumber)
+
+  document.querySelector('#stop').addEventListener('click', stopNumber)
        
 //   clearInterval(intervalId)
-
-
-
 </script>
-
-
 </html>
